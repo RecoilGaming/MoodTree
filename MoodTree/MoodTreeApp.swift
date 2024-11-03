@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct MoodTreeApp: App {
+    
+    // ==================== [ CONTENT ] ==================== //
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        // Persistent data
+        .modelContainer(for: [MoodData.self, ActivityData.self])
     }
+    
 }
